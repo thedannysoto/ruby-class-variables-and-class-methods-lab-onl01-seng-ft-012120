@@ -39,7 +39,7 @@ class Song
     @@artists
   end 
   
-  def genre.count
+  def genre_count
     @@genres_hash
   end 
   
