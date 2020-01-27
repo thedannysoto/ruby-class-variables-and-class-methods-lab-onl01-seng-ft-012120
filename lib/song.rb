@@ -30,9 +30,15 @@ class Song
   def self.artists
     artist_array = []
     @@artists.map do |artist|
+      if @@artists_hash.include?(artist)
+        @@artists_hash(artist) += 1 
+      else 
+        @@artists_hash(artist) = 1 
+      end 
       if artist_array.include?(artist) == false 
         artist_array << artist
-      end 
+      end
+    end 
     return artist_array
   end 
   
