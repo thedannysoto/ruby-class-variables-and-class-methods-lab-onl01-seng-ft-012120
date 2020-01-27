@@ -53,6 +53,7 @@ class Song
       else 
         @@artists_hash(artist) = 1 
       end 
+    end 
     return @@artists_hash
   end 
   
