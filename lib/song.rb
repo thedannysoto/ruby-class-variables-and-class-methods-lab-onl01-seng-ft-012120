@@ -47,12 +47,12 @@ class Song
   def self.genre_count
      @@genres.map do |genre|
       if @@genres_hash.include?(genre)
-        @@artists_hash[artist] += 1 
+        @@genres_hash[genre] += 1 
       else 
-        @@artists_hash[artist] = 1 
+        @@genres_hash[genre] = 1 
       end 
     end 
-    return @@artists_hash
+    return @@genres_hash
   end 
   
   def self.artist_count
