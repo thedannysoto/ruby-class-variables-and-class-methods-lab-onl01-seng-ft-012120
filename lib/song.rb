@@ -4,7 +4,9 @@ class Song
   
   @@count = 0 
   @@genres = []
+  @@genres_hash = {}
   @@artists = []
+  @@artists_hash = {}
   
   
   def initialize(name, artist, genre)
@@ -19,6 +21,7 @@ class Song
     
     if @@genres.include?(@genre) == false
       @@genres << @genre
+      @@genres_hash[@genre] = 1
     end 
     
   end 
@@ -31,6 +34,7 @@ class Song
     @@artists
   end 
   
+  def genre.count
   
   
   
