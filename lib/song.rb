@@ -18,9 +18,6 @@ class Song
     @@artists << @artist
     @@genres << @genre 
     
-    
-
-    
   end 
   
   def self.count
@@ -37,7 +34,17 @@ class Song
     return artist_array
   end 
   
-  def genre_count
+  def self.genres
+    genre_array = []
+    @@genres.map do |genre|
+      if genre_array.include?(genre) == false 
+        genre_array << genre
+      end
+    end 
+    return genre_array
+  end 
+  
+  def self.genre_count
     @@genres_hash
   end 
   
