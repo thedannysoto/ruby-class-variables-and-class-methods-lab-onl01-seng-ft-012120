@@ -45,7 +45,14 @@ class Song
   end 
   
   def self.genre_count
-    @@genres_hash
+     @@genres.map do |genre|
+      if @@genres_hash.include?(genre)
+        @@artists_hash[artist] += 1 
+      else 
+        @@artists_hash[artist] = 1 
+      end 
+    end 
+    return @@artists_hash
   end 
   
   def self.artist_count
