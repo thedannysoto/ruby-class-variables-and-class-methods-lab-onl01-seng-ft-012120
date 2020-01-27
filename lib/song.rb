@@ -23,12 +23,17 @@ class Song
     
   end 
   
-  def count
+  def self.count
     @@count
   end 
   
-  def artists
-    @@artists
+  def self.artists
+    artist_array = []
+    @@artists.map do |artist|
+      if artist_array.include?(artist) == false 
+        artist_array << artist
+      end 
+    return artist_array
   end 
   
   def genre_count
