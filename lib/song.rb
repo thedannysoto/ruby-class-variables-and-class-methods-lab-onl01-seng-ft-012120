@@ -18,21 +18,12 @@ class Song
     @@artists << @artist
     @@genres << @genre 
     
-    # if @@artists.include?(@artist) == false 
-    #   @@artists_hash[@artist] = 1 
-    # else 
-    #   @@artists_hash[@artist] += 1 
-    # end 
     
-    # if @@genres.include?(@genre) == false
-    #   @@genres_hash[@genre] = 1
-    # else 
-    #   @@genres_hash[@genre] += 1 
-    # end 
+
     
   end 
   
-  def count
+  def .count
     @@count
   end 
   
