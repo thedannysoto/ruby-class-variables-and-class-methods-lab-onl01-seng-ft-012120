@@ -23,7 +23,7 @@ class Song
     
   end 
   
-  def .count
+  def count
     @@count
   end 
   
